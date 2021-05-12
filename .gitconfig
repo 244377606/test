@@ -4,11 +4,12 @@
 [alias]
 	a = add -A
 	c = commit -m update
-[diff]
-    tool = bc4
-[difftool "bc4"]
-    cmd = \"D:/aaaXmcTools/MyWebTools/beeyCom/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" 
+	m = mergetool --tool=bc4
+
 [merge]
     tool = bc4
 [mergetool "bc4"]
-    cmd = \"D:/aaaXmcTools/MyWebTools/beeyCom/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"	
+    cmd = \"d:/aaaXmcTools/MyWebTools/beeyCom/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+    trustExitCode = true
+[mergetool]
+    keepBackup = false
